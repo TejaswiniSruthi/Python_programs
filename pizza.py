@@ -12,5 +12,4 @@ if(n>=2):
     n=n%2
 if(n>=1):
     s+=(n//1)*dic[1]
-    n=n%1
 print(s)
