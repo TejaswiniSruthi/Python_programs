@@ -1,15 +1,13 @@
-import math as M
+from math import sqrt
+
 def isperfect(num):
     res=1
-    sq=int(M.sqrt(num))
-    for i in range(2,sq+1):
+    for i in range(2,int(sqrt(num))+1):
         if(num%i==0):
+            if((num//i)==i):
+                continue
             res=res+i+(num//i)
-            #print(i,num//i,res)
     return res==num
-t=int(input())
-while(t):
-    num=int(input())
-    res=isperfect(num)
-    print(res)
-    t=t-1
+
+num=int(input())
+print(isperfect(num))
